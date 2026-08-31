@@ -72,7 +72,7 @@
             </div>
         </div>
         <div class="main-order-box">
-            <div class="main-order-form" id="orderForm" [formGroup]="orderForm" [style.dysplay]="orderId() ? 'nome' : null">
+            <div class="main-order-form" id="orderForm" [formGroup]="orderForm" [style.display]="orderId() ? 'none' : null">
                 <div class="main-order-title">Оформление доставки</div>
                 <div class="main-block-info-row">
                     <div class="main-block-title">Контакты</div>
@@ -91,7 +91,7 @@
                         <textarea id="comment" formControlName="comment" placeholder="Детали доставки и комментарии"></textarea>
                     </div>
                 </div>
-                <button id="submit" class="button main-submit-request" type="button" [disabled]="!calculationResult"() || orderForm.invalid (click)="submitOrder()">Отправить
+                <button id="submit" class="button main-submit-request" type="button" [disabled]="!calculationResult() || orderForm.invalid" (click)="submitOrder()">Отправить
                     заявку
                 </button>
             </div>
